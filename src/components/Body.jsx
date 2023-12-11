@@ -1,5 +1,5 @@
 import React from 'react';
-import resList from '../data/ResturantCard';
+import resList from '../data/carddata';
 
 const RestaurantCard = (props) => {
 
@@ -36,8 +36,6 @@ export default function Body() {
             resList.map(resturant => <RestaurantCard key={resturant.id} {...resturant} />)
           }
         </div>
-        
-
     </div>
   );
 }
