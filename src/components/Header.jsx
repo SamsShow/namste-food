@@ -3,7 +3,7 @@ import logo1 from '../assets/logo1.png';
 
 export default function Header() {
   return (
-    <div className="flex justify-between border-solid border-black border-[1px] ">
+    <div className="flex justify-between border-solid border-black border-[1px] cursor-pointer ">
         <div className=''>
             <img className='w-16 mt-2' src={logo1} alt="logo" />
         </div>
