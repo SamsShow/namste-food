@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <div className="flex justify-between border-solid border-black border-[1px] ">
         <div className=''>
-            <img className='w-16' src={logo1} alt="logo" />
+            <img className='w-16 mt-2' src={logo1} alt="logo" />
         </div>
         <div className=''>
             <ul className='flex text-xl'>
