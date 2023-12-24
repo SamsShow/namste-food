@@ -6,11 +6,14 @@ const Header = () => {
   const [ btnNameReact, setBtnNameReact ] = useState("Login");
 
   return (
-    <div className="flex justify-between border-solid border-black border-[1px] cursor-pointer ">
-      <div className="">
+    <div className="flex justify-between border-solid border-black border-[1px]">
+      <div className="flex">
         <img className="w-16 m-2 " src={logo1} alt="logo" />
+        <h1 className="mt-3 font-extrabold">Namaste Food</h1>
+        <h3  className="mt-10 cursor-wait">Bad UI but Awesome food</h3>
       </div>
-      <div className="">
+      
+      <div className="cursor-pointer">
         <ul className="flex text-xl ">
           <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md transition-all">
             Home

@@ -33,13 +33,14 @@ export default function Body() {
           <input
             className="p-3 border-solid border-[1px] rounded-lg m-3"
             type="text"
-            placeholder="Search for Restaurants or Cuisines"
+            placeholder="Search for Restaurants"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
+            className="p-1 m-3 cursor-pointer border-solid border-[1px] rounded-md transition-all bg-zinc-500 hover:bg-zinc-900 text-white"
             onClick={() => {
               const filteredList = resList.filter((res) =>
                 res.name.toLowerCase().includes(searchText.toLowerCase())
