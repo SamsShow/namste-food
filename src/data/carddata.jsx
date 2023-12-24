@@ -79,6 +79,7 @@ const resList= [
       "rating": 4.8,
       "time": "20-30 mins"
     }    
-]
+];
+
 
 export default resList;
