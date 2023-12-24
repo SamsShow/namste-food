@@ -11,23 +11,25 @@ const Header = () => {
         <img className="w-16 m-2 " src={logo1} alt="logo" />
       </div>
       <div className="">
-        <ul className="flex text-xl transition-all">
-          <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md ">
+        <ul className="flex text-xl ">
+          <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md transition-all">
             Home
           </li>
-          <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md ">
+          <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md transition-all">
             About
           </li>
-          <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md ">
+          <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md transition-all">
             Menu
           </li>
-          <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md ">
+          <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md transition-all">
             Contact
           </li>
           <button
-            className="p-2 m-3 bg-red-400 hover:bg-red-600  rounded-md"
+            className="p-2 m-3 bg-red-400 hover:bg-red-600 rounded-md transition-all"
             onClick={() => {
-              setBtnNameReact("Logout");
+              btnNameReact === "Login"
+              ? setBtnNameReact("Logout") 
+              : setBtnNameReact("Login");
             }}
           >
             {btnNameReact}
