@@ -2,33 +2,32 @@ import React from 'react';
 import resList from '../data/carddata';
 import RestaurantCard from '../components/Resturantcards.jsx';
 import { useState,useEffect } from 'react';
-import shimmer from './Shimmerr.jsx';
+import Shimmer from './Shimmerr.jsx';
 
 export default function Body() {
   const [filteredResList, setFilteredResList] = useState(resList);
 
-  useEffect(() => {
-    fetchData();
-  },[])
+  // useEffect(() => {
+  //   fetchData();
+  // },[])
 
-  const fetchData = async () => {
-    const data = await fetch(
+  // const fetchData = async () => {
+  //   const data = await fetch(
 
-    );
-    const json = await data.json();   
-  }
-
-
-  if (resList.length === 0) {
-    return < shimmer/>
-  }
+  //   );
+  //   const json = await data.json();   
+  // }
 
   const filterTopRatedRestaurants = () => {
     const filteredList = resList.filter((res) => res.rating > 4.5);
     setFilteredResList(filteredList);
   };
 
-  return (
+  
+
+  return filteredResList.length===0 ?(
+    <Shimmer/>
+  ): (
     <div className=''>
       <div className=''>
         <div className=''>
