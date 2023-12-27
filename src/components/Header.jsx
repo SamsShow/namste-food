@@ -1,9 +1,13 @@
 import React from "react";
 import logo1 from "../assets/logo1.png";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const Header = () => {
   const [ btnNameReact, setBtnNameReact ] = useState("Login");
+
+  useEffect(() => {
+
+  }, [])
 
   return (
     <div className="flex justify-between border-solid border-black border-[1px]">
