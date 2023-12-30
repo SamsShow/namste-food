@@ -1,6 +1,7 @@
 import React from "react";
 import logo1 from "../assets/logo1.png";
 import { useState,useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [ btnNameReact, setBtnNameReact ] = useState("Login");
@@ -20,16 +21,16 @@ const Header = () => {
       <div className="cursor-pointer">
         <ul className="flex text-xl ">
           <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md transition-all">
-            Home
+            <Link to ='/'>Home</Link> 
           </li>
           <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md transition-all">
-            About
+            <Link to='/about'>About</Link>
           </li>
           <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md transition-all">
-            Menu
+            <Link>Menu</Link>
           </li>
           <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md transition-all">
-            Contact
+            <Link to='/contact'>Contact</Link>
           </li>
           <button
             className="p-2 m-3 bg-red-400 hover:bg-red-600 rounded-md transition-all"
