@@ -11,6 +11,9 @@ class UserClass extends React.Component{
         super(props);
     }
 
+    // First Constructor is Called then render is called.
+    // There is an another method called componentDidMount which is called after render method and constructor.
+
     render(){
         return (
           <div className="p-2 m-2 border">
