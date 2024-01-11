@@ -1,8 +1,15 @@
-import { useEffect } from "react";
+import useResturantMenu from "../utils/useResturantMenu";
+import { Params } from "react-router-dom";
+
 
 const ResturantMenu = () => {
+    const {resID} = useParams();
 
-    useEffect(() => {}, [])
+    const {resInfo} = useResturantMenu(resID);
+
+    const { name, cuisines, thumb, location, timings, highlights, currency, average_cost_for_two, menu_url } = resInfo?.cards[0]?.card?.card?.info;
+
+    const { dishes } = resInfo?.cards[0]?.card?.card?.sections[0]?.section?.section;
 
     return(
         <div>
