@@ -31,6 +31,9 @@ const Header = () => {
           <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md transition-all">
             <Link to='/contact'>Contact</Link>
           </li>
+          <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md transition-all">
+            <Link to='/grocery'>Grocery</Link>
+          </li>
           <button
             className="p-2 m-3 bg-red-400 hover:bg-red-600 rounded-md transition-all"
             onClick={() => {

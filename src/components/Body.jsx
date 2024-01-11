@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmerr.jsx";
 import useOnlineStatus from "../utils/UseOnlineStatus.jsx";
 
+
 export default function Body() {
   const [filteredResList, setFilteredResList] = useState(resList);
   const [searchText, setSearchText] = useState("");
