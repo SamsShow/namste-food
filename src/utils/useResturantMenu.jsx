@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import {MENU_API} from "../utils/constants.js";
+import {MENU_API} from "../utils/constants.jsx";
 
 const useResturantMenu = (resID) => {
     //fetch Data

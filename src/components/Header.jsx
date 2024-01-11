@@ -2,13 +2,11 @@ import React from "react";
 import logo1 from "../assets/logo1.png";
 import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/UseOnlineStatus.jsx";
 
 const Header = () => {
   const [ btnNameReact, setBtnNameReact ] = useState("Login");
-
-  useEffect(() => {
-
-  }, [])
+  const OnlineStatus = useOnlineStatus()
 
   return (
     <div className="flex justify-between border-solid border-black border-[1px]">
@@ -20,6 +18,7 @@ const Header = () => {
       
       <div className="cursor-pointer">
         <ul className="flex text-xl ">
+          <li className="p-2 m-3">{OnlineStatus?"🟢":"🔴"}</li>
           <li className="p-2 m-3 hover:bg-zinc-900 hover:text-white rounded-md transition-all">
             <Link to ='/'>Home</Link> 
           </li>

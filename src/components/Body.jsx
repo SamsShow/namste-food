@@ -3,6 +3,7 @@ import resList from "../data/carddata";
 import RestaurantCard from "../components/Resturantcards.jsx";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmerr.jsx";
+import useOnlineStatus from "../utils/UseOnlineStatus.jsx";
 
 export default function Body() {
   const [filteredResList, setFilteredResList] = useState(resList);
@@ -23,6 +24,20 @@ export default function Body() {
     const filteredList = resList.filter((res) => res.rating > 4.5);
     setFilteredResList(filteredList);
   };
+
+
+  const onlineStatus = useOnlineStatus()
+
+  if (!onlineStatus) {
+    return (
+      <div className="flex flex-col items-center justify-center h-screen">
+        <h1 className="text-3xl font-bold text-gray-900">You are offline !</h1>
+        <h2 className="text-2xl font-bold text-red-900">
+          Check your internet connection
+        </h2>
+      </div>
+    );
+  }
 
   return filteredResList.length === 0 ? (
     <Shimmer />
