@@ -47,7 +47,7 @@ export default function Body() {
       <div className="">
         <div className="">
           <input
-            className="p-3 border-solid border-[1px] rounded-lg m-3"
+            className="p-3 border-solid border-[1px] rounded-md m-3"
             type="text"
             placeholder="Search for Restaurants"
             value={searchText}
@@ -56,7 +56,7 @@ export default function Body() {
             }}
           />
           <button
-            className="p-1 m-3 cursor-pointer border-solid border-[1px] rounded-md transition-all bg-zinc-500 hover:bg-zinc-900 text-white"
+            className="p-1 m-3 cursor-pointer border-solid border-[1px] rounded-sm hover:scale-95 transition-all bg-zinc-500 hover:bg-zinc-900 text-white"
             onClick={() => {
               const filteredList = resList.filter((res) =>
                 res.name.toLowerCase().includes(searchText.toLowerCase())
@@ -67,7 +67,7 @@ export default function Body() {
             Search
           </button>
           <button
-            className="p-1 m-3 cursor-pointer border-solid border-[1px] rounded-md transition-all bg-zinc-500 hover:bg-zinc-900 text-white"
+            className="p-1 m-3 cursor-pointer border-solid border-[1px] rounded-sm hover:scale-95 transition-all bg-zinc-500 hover:bg-zinc-900 text-white"
             onClick={filterTopRatedRestaurants}
           >
             Top Rated Restaurants
